@@ -8,3 +8,12 @@
   margin: 10px 0;
   width: 50vw;
 }
+.row {
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px solid;
+}
+
+.col {
+  flex: 1;
+}

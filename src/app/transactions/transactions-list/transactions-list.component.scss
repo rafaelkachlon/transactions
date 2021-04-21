@@ -33,14 +33,14 @@
   border-bottom: 1px solid;
 }
 
+.col {
+  flex: 1;
+}
 .table-header {
   font-size: larger;
   font-weight: bolder;
 }
 
-.col {
-  flex: 1;
-}
 
 .transaction-list {
   display: flex;

@@ -12,11 +12,8 @@
         <div class="col">תאריך עסקה</div>
         <div class="col">סכום עסקה</div>
       </div>
-      <div class="row" *ngFor="let transaction of transactions">
-        <div class="col">{{transaction.merchantName}}</div>
-        <div class="col">{{transaction.purchaseDate | date:'dd/MM'}}</div>
-        <div class="col">{{transaction.amount}}{{transaction.symbol}}</div>
-      </div>
+      <app-transaction-item *ngFor="let transaction of transactions"
+                            [transaction]="transaction"></app-transaction-item>
     </div>
   </ng-container>
   <ng-template #loadingOrError>
