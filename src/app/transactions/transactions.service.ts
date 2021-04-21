@@ -25,10 +25,10 @@ export class TransactionsService {
   }
 
   saveMonthlyTransactions(amount: number): Observable<any> {
-    const body = {
-      debitDate: new Date(),
+    const body = [{
+      debitDate: new Date().toISOString(),
       totalPayment: amount
-    };
+    }];
     return this.http.post(this.saveMonthlyTransactionsUrl, body, this.httpOptions).pipe(
       map(res => res),
       // catchError(error => this.handleError(error))

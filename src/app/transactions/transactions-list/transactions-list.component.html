@@ -1,7 +1,7 @@
 <div class="container">
   <p-toolbar styleClass="header">
     <span class="title">העסקאות שלי</span>
-    <button (click)="logout()">התנתק</button>
+    <button class="logout" (click)="logout()">התנתק</button>
   </p-toolbar>
 
   <ng-container *ngIf="transactions$ | async as transactions; else loadingOrError">
@@ -21,7 +21,7 @@
 
 
   <p-toolbar styleClass="footer">
-    <span class="title">כל הזכויות שמורות לכאל</span>
+    <span class="title">Ⓒ כל הזכויות שמורות לכאל</span>
   </p-toolbar>
 
 </div>

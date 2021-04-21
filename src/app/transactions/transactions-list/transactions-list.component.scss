@@ -1,7 +1,7 @@
 
 :host ::ng-deep .p-toolbar.header, :host ::ng-deep .p-toolbar.footer {
   background-color: #0f2133;
-  height: 50px;
+  height: 70px;
   border: none;
   width: 100%;
   margin-bottom: 10px;
@@ -9,7 +9,6 @@
   .title {
     font-size: 20px;
     color: white;
-    font-weight: bold;
     letter-spacing: 3px;
     text-transform: uppercase;
   }
@@ -36,4 +35,12 @@
 .server-error {
   font-size: 30px;
   margin: 50px;
+}
+
+.logout {
+  background: transparent;
+  color: white;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
 }
