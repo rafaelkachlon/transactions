@@ -5,6 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ToolbarModule} from 'primeng/toolbar';
 import {TransactionItemComponent} from './transaction-item/transaction-item.component';
 import {ToastModule} from 'primeng/toast';
+import { TransactionTotalComponent } from './transaction-total/transaction-total.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [TransactionsListComponent, TransactionItemComponent],
+  declarations: [TransactionsListComponent, TransactionItemComponent, TransactionTotalComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
