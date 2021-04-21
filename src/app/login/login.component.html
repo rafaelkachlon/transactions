@@ -1,0 +1,23 @@
+<div class="login-container">
+<!--  <img src="assets/images/full_logo.png" width="500" style="margin-bottom: 20px">-->
+  <div class="login-box">
+    <h1>התחברות למערכת</h1>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-control-1">
+        <p>שם משתמש</p>
+        <input type="text" [(ngModel)]="username" name="username" required="required"
+               #userName="ngModel" (focus)="LoginError=false">
+        <p class="error" *ngIf="userName.invalid && userName.errors.required && loginForm.submitted">שדה חובה</p>
+      </div>
+      <div class="form-control-1">
+        <p>סיסמא</p>
+        <input type="password" required="required" name="password" #Password="ngModel"
+               [(ngModel)]="password" (focus)="LoginError=false">
+        <p class="error" *ngIf="Password.invalid && loginForm.submitted">שדה חובה</p>
+      </div>
+      <input type="submit" value="התחבר">
+
+      <div class="login-error" *ngIf="LoginError">שם המשתמש או הסיסמא אינם נכונים</div>
+    </form>
+  </div>
+</div>

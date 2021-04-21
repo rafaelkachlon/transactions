@@ -1,0 +1,41 @@
+<div class="container">
+  <p-toolbar styleClass="header">
+    <span class="title">העסקאות שלי</span>
+  </p-toolbar>
+
+  <ng-container *ngIf="transactions$ | async as transactions; else loadingOrError">
+
+    <div class="transaction-table">
+      <div class="table-header">
+        <div class="col">שם העסק</div>
+        <div class="col">תאריך עסקה</div>
+        <div class="col">סכום עסקה</div>
+        <!--        <div class="col">שם העסק</div>-->
+      </div>
+      <div class="row" *ngFor="let transaction of transactions">
+        <div class="col">{{transaction.merchantName}}</div>
+        <div class="col">{{transaction.purchaseDate | date:'dd/MM'}}</div>
+        <div class="col">{{transaction.amount}}{{transaction.symbol}}</div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #loadingOrError>
+    <div>
+      קיימת תקלה בשרות, אנא נסו שוב
+    </div>
+  </ng-template>
+
+  <ng-container *ngIf="total">
+    <div class="total">
+      <span>סכום עסקאות כולל</span>&nbsp;
+      <span>{{total}}</span>
+    </div>
+    <button (click)="saveMonthlyTransactions()">שמור</button>
+  </ng-container>
+
+  <p-toolbar styleClass="footer">
+    <span class="title">כל הזכויות שמורות לכאל</span>
+  </p-toolbar>
+
+</div>
+<p-toast position="bottom-right"></p-toast>

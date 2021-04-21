@@ -1,0 +1,10 @@
+.transaction-item {
+  direction: rtl;
+  display: flex;
+  border: 1px solid;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px 0;
+  width: 50vw;
+}
