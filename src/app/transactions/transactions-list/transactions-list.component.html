@@ -25,13 +25,13 @@
     </div>
   </ng-template>
 
-  <ng-container *ngIf="total">
+  <div class="total-container" *ngIf="total">
     <div class="total">
       <span>סכום עסקאות כולל</span>&nbsp;
       <span>{{total}}</span>
     </div>
     <button (click)="saveMonthlyTransactions()">שמור</button>
-  </ng-container>
+  </div>
 
   <p-toolbar styleClass="footer">
     <span class="title">כל הזכויות שמורות לכאל</span>
