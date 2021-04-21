@@ -8,6 +8,7 @@
   margin: 10px 0;
   width: 50vw;
 }
+
 .row {
   display: flex;
   padding: 5px;
@@ -16,4 +17,22 @@
 
 .col {
   flex: 1;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  /* max-width: 82vw; */
+  padding-left: 30px;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  align-items: center;
+
+  .date {
+    color: gray;
+  }
+
+  .name, .total {
+    font-weight: bold;
+  }
 }

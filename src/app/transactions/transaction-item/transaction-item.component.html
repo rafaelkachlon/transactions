@@ -1,5 +1,14 @@
-<div class="row">
-  <div class="col">{{transaction.merchantName}}</div>
-  <div class="col">{{transaction.purchaseDate | date:'dd/MM'}}</div>
-  <div class="col">{{transaction.amount}}{{transaction.symbol}}</div>
+<!--<div class="row">-->
+<!--  <div class="col">{{transaction.merchantName}}</div>-->
+<!--  <div class="col">{{transaction.purchaseDate | date:'dd/MM'}}</div>-->
+<!--  <div class="col">{{transaction.amount}}{{transaction.symbol}}</div>-->
+<!--</div>-->
+<div class="item">
+  <div class="right">
+    <div class="date">{{transaction.purchaseDate| date:'dd/MM/yy' }}</div>
+    <div class="name">{{transaction.merchantName }}</div>
+  </div>
+  <div class="left">
+    <div class="total">{{transaction.amount}} {{ transaction.symbol}}</div>
+  </div>
 </div>

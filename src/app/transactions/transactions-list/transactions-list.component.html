@@ -7,11 +7,6 @@
   <ng-container *ngIf="transactions$ | async as transactions; else loadingOrError">
 
     <div class="transaction-table">
-      <div class="table-header">
-        <div class="col">שם העסק</div>
-        <div class="col">תאריך עסקה</div>
-        <div class="col">סכום עסקה</div>
-      </div>
       <app-transaction-item *ngFor="let transaction of transactions"
                             [transaction]="transaction"></app-transaction-item>
     </div>

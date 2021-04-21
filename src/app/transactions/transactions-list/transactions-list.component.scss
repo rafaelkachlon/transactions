@@ -27,20 +27,6 @@
 
 }
 
-.table-header, .row {
-  display: flex;
-  padding: 5px;
-  border-bottom: 1px solid;
-}
-
-.col {
-  flex: 1;
-}
-.table-header {
-  font-size: larger;
-  font-weight: bolder;
-}
-
 
 .transaction-list {
   display: flex;
