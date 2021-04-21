@@ -53,8 +53,8 @@ input[type="password"], input[type="text"] {
   input[type="submit"] {
     border: none;
     height: 40px;
-    background: #b0c932;
-    color: black;
+    background: darkblue;
+    color: white;
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
@@ -62,18 +62,14 @@ input[type="password"], input[type="text"] {
 
     &:hover {
       cursor: pointer;
-      background: #7b982a;
-      color: white;
     }
   }
 
   .login-error {
     text-align: center;
     margin-top: 15px;
-    color: black;
+    color: darkred;
     font-size: 18px;
-    background: #e47171;
-    border: 1px solid black;
     padding: 3px;
   }
 
