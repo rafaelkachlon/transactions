@@ -4,6 +4,7 @@ import {map} from 'rxjs/operators';
 import {Transaction, TransactionsModel} from '../../models/transaction.model';
 import {Observable} from 'rxjs';
 import {MessageService} from 'primeng/api';
+import {AuthenticationService} from '../../login/authentication.service';
 
 @Component({
   selector: 'app-transactions-list',
@@ -16,7 +17,8 @@ export class TransactionsListComponent implements OnInit {
   total: number;
 
   constructor(private transactionService: TransactionsService,
-              private message: MessageService) {
+              private message: MessageService,
+              private auth: AuthenticationService) {
   }
 
   ngOnInit(): void {
@@ -52,4 +54,7 @@ export class TransactionsListComponent implements OnInit {
 
   }
 
+  logout(): void {
+    this.auth.logout();
+  }
 }

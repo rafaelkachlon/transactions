@@ -1,6 +1,7 @@
 <div class="container">
   <p-toolbar styleClass="header">
     <span class="title">העסקאות שלי</span>
+    <button (click)="logout()">התנתק</button>
   </p-toolbar>
 
   <ng-container *ngIf="transactions$ | async as transactions; else loadingOrError">
@@ -10,7 +11,6 @@
         <div class="col">שם העסק</div>
         <div class="col">תאריך עסקה</div>
         <div class="col">סכום עסקה</div>
-        <!--        <div class="col">שם העסק</div>-->
       </div>
       <div class="row" *ngFor="let transaction of transactions">
         <div class="col">{{transaction.merchantName}}</div>
@@ -27,7 +27,7 @@
 
   <div class="total-container" *ngIf="total">
     <div class="total">
-      <span>סכום עסקאות כולל</span>&nbsp;
+      <span>סכום עסקאות כולל בחודש אוגוסט</span>&nbsp;
       <span>{{total}}</span>
     </div>
     <button (click)="saveMonthlyTransactions()">שמור</button>
