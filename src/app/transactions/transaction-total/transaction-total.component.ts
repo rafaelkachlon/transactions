@@ -1,9 +1,10 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-transaction-total',
   templateUrl: './transaction-total.component.html',
-  styleUrls: ['./transaction-total.component.scss']
+  styleUrls: ['./transaction-total.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TransactionTotalComponent implements OnInit {
 
